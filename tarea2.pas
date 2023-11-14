@@ -80,9 +80,8 @@ procedure inicializarPredictor ( var pred: Predictor );
 var
     i : Integer;
 begin
-    for i := 0 to MAXHASH - 1 do
-        pred[i] := nil;
-    end;
+    for i := 1 to MAXHASH - 1 do pred[i] := nil;
+end;
 
 // Procedimiento entrenarPredictor. Dada una lista de palabras txt que
 // representa a un texto, entrena al predictor pred con dicho texto. Esto
