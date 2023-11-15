@@ -105,21 +105,27 @@ end;
 // 		     info : Palabra;
 // 		     sig  : Texto
 // 		  end;
-procedure entrenarPredictor ( txt : Texto; var pred: Predictor );
+procedure entrenarPredictor(txt: Texto; var pred: Predictor);
 var
-    i : Integer;
+  palabraAnterior, palabraActual: Palabra;
+  codigoHash: Natural;
 begin
-    while txt <> nil do
+  palabraAnterior.tope := 0;
+  palabraActual.tope := 0;
+
+  while txt <> nil do
+  begin
+    palabraAnterior := palabraActual;
+    palabraActual := txt^.info;
+
+    if palabraAnterior.tope > 0 then
     begin
-        i := 1;
-        while i < txt^.info.tope do
-        begin
-            agregarOcurrencia( txt^.info, pred[hash( SEMILLA, PASO, MAXHASH, txt^.info )] );
-            i := i + 1; 
-        end;
-        txt := txt^.sig;
+      codigoHash := hash(SEMILLA, PASO, MAXHASH, palabraAnterior);
+      agregarOcurrencia(palabraActual, pred[codigoHash]);
     end;
-    end;
+    txt := txt^.sig;
+  end;
+end;
 
 // Procedimiento insOrdAlternativas. Inserta pc en alts conservando su
 // orden, que es de mayor a menor de acuerdo a la relación de orden definida

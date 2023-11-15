@@ -1,0 +1,15 @@
+ -- El caso 01  se resolvió correctamente
+ -- El caso 02  se resolvió correctamente
+ -- El caso 03  se resolvió correctamente
+ -- El caso 04  se resolvió correctamente
+ -- El caso 05  se resolvió correctamente
+ -- El caso 06  se resolvió correctamente
+ -- El caso 06  se resolvió correctamente
+ -- El caso 06  se resolvió correctamente
+ -- El caso 07  se resolvió correctamente
+ -- El caso 08  se resolvió correctamente
+ -- El caso 08  se resolvió correctamente
+ -- El caso 08  se resolvió correctamente
+ -- El caso 09  se resolvió correctamente
+ -- El caso 10  se resolvió correctamente
+Correctos:  14  Errores:  0  Timeouts:  0
